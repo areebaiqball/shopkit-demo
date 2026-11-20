@@ -41,3 +41,10 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
+        with:
+          # This forces the scanner to use these keys, even if the file is missing
+          args: >
+            -Dsonar.projectKey=areebaiqball_shopkit-demo
+            -Dsonar.organization=areebaiqball
+            -Dsonar.sources=.
+            -Dsonar.python.coverage.reportPaths=coverage.xml
