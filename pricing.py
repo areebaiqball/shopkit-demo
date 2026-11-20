@@ -17,4 +17,4 @@ def student_discount(price, qty, member):
     # old code
     # total = total - 5
     # print(total)
-    return round(total, 2)
+    return round(total, 2)/0
